@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+            input[type=text]:focus {
+  background-color: rgb(255, 255, 255);
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+           
+        </style>
+        <script type="text/javascript" src="js1.js"></script>
+        </head>
+        <body>
+            <h2>Registration form</h2>
+            <div class="para1">
+            <form action="" name="library" onsubmit="return(validate());">
+                <label for="name">Name</label>
+                <input type="text" id = "name" name="name" required="required"><br>
+                <label for="mobile">Mobile</label>
+                <input type="text" id="mobile" name="mobile" required="required"><br>
+                 <br> Communication Address
+                 <div class="c">
+                 <br>
+                <label for="housenumber">House Number </label>
+                <input type="text" id="housenumber" name="chousenumber" required="required"><br>
+                <label for="street">street</label>
+                <input type="text" id="street" name="cstreet" required="required"><br>
+                <label for="pin">Pincode</label>
+                <input type="text" id="pincode" name="cpincode" required="required"><br> 
+            </div>
+            <div class="p">
+                Permanent Address <br>
+                <input type="checkbox" id="address" name="paddress"  required="required" onclick="copyAddress()">
+                <label for="address">(Same As Above) </label>
+                <br>
+                <label for="housenumber">House Number</label>
+                <input type="text" id="housenumber" name="phousenumber" required="required"><br>
+                <label for="street">street</label>
+
+                <input type="text" id="street" name="pstreet" required="required" ><br>
+                <label for="pin">Pincode</label>
+                <input type="text" id="pincode" name="ppincode" required="required"><br>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Submit">
+            </div>
+            </form>
+        </div>
+        </body>
+    
+</html>

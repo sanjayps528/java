@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .split{
+            margin-top: ;
+            margin-bottom: 10%;
+            margin-left: 30%;
+            margin-right: 30%;
+        }
+
+        form{
+           padding: 3%;
+           margin-top: 0;
+           background-color:rgb(148, 145, 141);        
+        }
+        label{
+            float: left;
+        }
+        input[type=text]{
+            background-color:;
+            width: 100%;
+            padding: 6px 13px;
+             margin: 8px 0;
+            box-sizing: border-box;
+            border-radius: 11px;
+        }
+        input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0; 
+        border: none;
+        border-radius: 11px;
+        cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="first">
+        <h1><center>Registration Form</center> </h1>
+        <div class="split">
+            <script type="text/javascript" src="js1.js"></script>
+            <form name="library" action="/reg">
+                <label for="name">NAME</label>
+                <input type="text" id = "name" name="name" required="required" placeholder="Your name.."><br>
+                <label for="mobile">Mobile</label>
+
+                <input type="text" id="mobile" name="mobile" required="required" placeholder="Your Mobile Number.."><br>
+                Communication Address <br>
+                <label for="housenumber">House Number </label>
+                <input type="text" id="housenumber" name="chousenumber" required="required" placeholder="Your House Number.."><br>
+                <label for="street">street</label>
+                <input type="text" id="street" name="cstreet" required="required" placeholder="Your street.."><br>
+                <label for="pin">Pincode</label>
+                <input type="text" id="pincode" name="cpincode" required="required" placeholder="Your pincode.."><br>
+                Permanent Address <br>
+                <input type="checkbox" id="address" name="paddress"  required="required"  onclick="copyAddress()">
+                
+                <label for="address">(Same As Above) </label>
+                <br>
+                <label for="housenumber">House Number</label>
+                <input type="text" id="housenumber" name="phousenumber" placeholder="Your House Number.." required="required"><br>
+                <label for="street">street</label>
+
+                <input type="text" id="street" name="pstreet" required="required" placeholder="Your street.."><br>
+                <label for="pin">Pincode</label>
+                <input type="text" id="pincode" name="ppincode" required="required" placeholder="Your Pincode.."><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

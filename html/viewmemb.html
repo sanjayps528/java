@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* background: rgb(241, 187, 187); */
+        }
+        h1{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 20px;
+        }
+        td{
+            padding: 40px;
+
+        }
+        tr:nth-child(even) {
+        background-color: #dddddd;
+        }
+    </style>
+    <script>
+        function viewMembers() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            const xmlDoc = xhttp.responseXML;
+            const cd = xmlDoc.getElementsByTagName("CD");
+            myFunction(cd)
+        } 
+        xhttp.open("GET", "Member");
+        xhttp.send();
+        }
+        function myFunction(cd) {
+            let table="<tr><th>Artist</th><th>Title</th></tr>";
+            for (let i = 0; i < cd.length; i++) { 
+                table += "<tr><td>" +
+                cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+                "</td></tr>";
+            }
+        document.getElementById("demo").innerHTML = table;
+        }
+    </script>
+</head>
+<body>
+    <h1>  Members</h1>
+    <table>
+        <tr>
+            <th>Name & Address</th>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
